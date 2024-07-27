@@ -4,100 +4,150 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Abhinav Kumar's Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tiny5&display=swap"
+      rel="stylesheet"
+    />
     <style>
       body {
-        font-family: "Times New Roman", Times, serif;
+        font-family: "Poppins", sans-serif;
         line-height: 1.6;
         color: #333;
-        background-color: #f4f4f4;
+        background-color: #f9f9f9;
         margin: 0;
         padding: 0;
       }
       .container {
         max-width: 800px;
-        margin: 50px auto;
-        padding: 20px;
+        margin: 40px auto;
+        padding: 30px;
         background-color: #fff;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
       }
       h1,
       h2,
       h3,
       h4 {
-        color: #333;
+        color: #2c3e50;
       }
       h1 {
         font-size: 36px;
         margin-bottom: 10px;
+        text-align: center;
+        border-bottom: 3px solid #3498db;
+        padding-bottom: 10px;
       }
       h2 {
-        font-size: 30px;
-        margin-bottom: 20px;
+        font-size: 24px;
+        margin-top: 25px;
+        margin-bottom: 15px;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 5px;
       }
       h3 {
-        font-size: 26px;
+        font-size: 20px;
         margin-bottom: 10px;
       }
       h4 {
-        font-size: 22px;
+        font-size: 18px;
         margin-bottom: 5px;
       }
       .contact-info {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        background-color: #ecf0f1;
+        padding: 15px;
+        border-radius: 5px;
         margin-bottom: 20px;
+        text-align: center;
       }
       .contact-info a {
-        color: #333;
+        color: #3498db;
         text-decoration: none;
       }
-      .section {
-        margin-bottom: 30px;
+      .contact-info a:hover {
+        text-decoration: underline;
       }
-      .section-title {
-        border-bottom: 2px solid #333;
-        padding-bottom: 5px;
-        margin-bottom: 15px;
+      .section {
+        margin-bottom: 25px;
       }
       ul {
         list-style-type: none;
-        padding: 0;
+        padding-left: 0;
       }
       ul li {
-        margin-bottom: 10px;
+        margin-bottom: 8px;
+        position: relative;
+        padding-left: 20px;
       }
-      .languages ul,
-      .projects ul {
-        display: flex;
-        flex-wrap: wrap;
+      ul li::before {
+        content: "▹";
+        color: #3498db;
+        position: absolute;
+        left: 0;
       }
-      .languages ul li,
-      .projects ul li {
-        width: 50%;
+      .experience-item {
+        background-color: #f0f8ff;
+        padding: 15px;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        border-left: 4px solid #3498db;
       }
       .additional-info {
-        background-color: #f4f4f4;
-        padding: 10px;
-        border-left: 4px solid #333;
+        background-color: #f0f8ff;
+        padding: 15px;
+        border-radius: 5px;
+        margin-top: 15px;
+        border-left: 4px solid #3498db;
+      }
+      .download-button {
+        display: inline-block;
+        background-color: #3498db;
+        color: #ffffff;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+      }
+      .download-button:hover {
+        background-color: #2980b9;
+      }
+      .download-section {
+        text-align: center;
+        margin-top: 30px;
       }
     </style>
   </head>
   <body>
     <div class="container">
+      <h1>Abhinav Kumar</h1>
       <div class="contact-info">
-        <h1>Abhinav Kumar</h1>
-        <div>
+        <p>SOFTWARE DEVELOPER</p>
+        <p>
           <a href="mailto:abhinav.vikash2@gmail.com"
             >abhinav.vikash2@gmail.com</a
           >
           |
           <a href="https://github.com/abhinavk454">GitHub</a>
-        </div>
+          |
+          <a href="https://www.linkedin.com/in/maihuabhinav/">LinkedIn</a>
+        </p>
+      </div>
+
+      <div class="download-section">
+        <a
+          href="https://drive.google.com/uc?export=download&id=1x0s0F9EHRaX1QRaa6A4y2RDFn_PBFBIv
+"
+          class="download-button"
+          download="Abhinav_Kumar_Resume.pdf"
+          >Download Resume (PDF)</a
+        >
       </div>
 
       <div class="section">
-        <h2 class="section-title">Professional Summary</h2>
+        <h2>Professional Summary</h2>
         <p>
           Seasoned full-stack developer with over 3 years of professional
           experience, specializing in Python backend development and React
@@ -110,7 +160,7 @@
       </div>
 
       <div class="section">
-        <h2 class="section-title">Skills</h2>
+        <h2>Skills</h2>
         <h3>Backend</h3>
         <ul>
           <li><strong>Frameworks:</strong> Django, FastAPI, Flask</li>
@@ -139,8 +189,8 @@
       </div>
 
       <div class="section">
-        <h2 class="section-title">Professional Experience</h2>
-        <div>
+        <h2>Professional Experience</h2>
+        <div class="experience-item">
           <h3>
             Freelance Software Developer | Apex Creators, Kolkata, WB | 2023 -
             Present
@@ -168,7 +218,7 @@
             </li>
           </ul>
         </div>
-        <div>
+        <div class="experience-item">
           <h3>Software Developer Backend | ATPL, Kolkata, WB | 2022 - 2023</h3>
           <ul>
             <li>
@@ -193,7 +243,7 @@
             </li>
           </ul>
         </div>
-        <div>
+        <div class="experience-item">
           <h3>
             Software Engineer (ASE) | Tata Consultancy Services, Pune, IN | 2021
             - 2022
@@ -220,35 +270,34 @@
       </div>
 
       <div class="section">
-        <h2 class="section-title">Education</h2>
+        <h2>Education</h2>
         <p>
           <strong>Bachelor of Technology in Information Technology</strong
-          ><br />Indian Institute of Engineering Science and Technology,
-          Shibpur, Howrah, WB | 2017 - 2021
+          ><br />
+          Indian Institute of Engineering Science and Technology, Shibpur,
+          Howrah, WB | 2017 - 2021
         </p>
       </div>
 
       <div class="section">
-        <h2 class="section-title">Certifications</h2>
+        <h2>Certifications</h2>
         <ul>
-          <li>Microsoft Azure DevOps Expert (AZ-400)</li>
+          <li>Microsoft Azure Solutions (AZ-900)</li>
           <li>Meta Back-End Developer Professional Certificate</li>
         </ul>
       </div>
 
       <div class="section">
-        <h2 class="section-title">Languages</h2>
-        <div class="languages">
-          <ul>
-            <li>English (Professional working proficiency)</li>
-            <li>Hindi (Native proficiency)</li>
-            <li>Maithili (Native proficiency)</li>
-          </ul>
-        </div>
+        <h2>Languages</h2>
+        <ul>
+          <li>English (Professional working proficiency)</li>
+          <li>Hindi (Native proficiency)</li>
+          <li>Maithili (Native proficiency)</li>
+        </ul>
       </div>
 
       <div class="section">
-        <h2 class="section-title">Additional Information</h2>
+        <h2>Additional Information</h2>
         <div class="additional-info">
           <ul>
             <li>
