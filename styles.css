@@ -4,7 +4,7 @@
   --bg-color: #f9f9f9;
   --text-color: #333;
   --heading-color: #2f4f4f;
-  --accent-color: #ff6f61;
+  --accent-color: #ff7b61;
   --container-bg: #fff;
   --section-bg: #e0f7fa;
 }
@@ -13,7 +13,7 @@
   --bg-color: #1a1a1a;
   --text-color: #f0f0f0;
   --heading-color: #e0e0e0;
-  --accent-color: #ff8c7a;
+  --accent-color: #61ff83;
   --container-bg: #2a2a2a;
   --section-bg: #3a3a3a;
 }
@@ -53,6 +53,11 @@ header p {
 }
 
 header a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+a {
   color: var(--accent-color);
   text-decoration: none;
 }
