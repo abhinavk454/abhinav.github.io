@@ -11,6 +11,11 @@
   src: url(./carbontype.ttf);
 }
 
+@font-face {
+  font-family: "#1 Ichiro";
+  src: url(./phitradesign\ Handwritten\ Thin.ttf);
+}
+
 /* CSS Variables */
 :root {
   --bg-color: #ffffff;
@@ -21,16 +26,16 @@
 }
 
 .dark-mode {
-  --bg-color: #010011;
-  --text-color: #f3f3f3;
-  --text-color-line: #36ad03;
-  --heading-color: #ff4800;
+  --bg-color: #352d19;
+  --text-color: #ffffff;
+  --text-color-line: #00ff2f;
+  --heading-color: #00ff2f;
   --container-bg: #00000081;
 }
 
 /* Global Styles */
 body {
-  font-family: "1942 report", cursive;
+  font-family: "#1 Ichiro", cursive;
   line-height: 1.6;
   color: var(--text-color);
   background-color: var(--bg-color);
@@ -45,13 +50,14 @@ body {
 .container {
   max-width: 800px;
   margin: 40px auto;
-  padding: 50px;
+  padding: 80px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 1px 15px rgba(0, 0, 0, 0.2);
   background-color: var(--bg-color);
   background-image: linear-gradient(var(--text-color) 1px, transparent 1px),
     linear-gradient(90deg, var(--heading-color) 1px, transparent 1px);
-  background-size: 100% 20px, 100% 100%;
-  background-position: 0 0, 40px 0;
+  background-size: 100% 26px, 100% 100%;
+  background-position: 0 0, 60px 0;
+  border-radius: 10px;
 }
 
 /* Header Styles */
