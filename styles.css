@@ -14,20 +14,18 @@
 /* CSS Variables */
 :root {
   --bg-color: #ffffff;
-  --text-color: #000000;
-  --heading-color: #000000;
+  --text-color: #0039a6;
+  --text-color-line: #0039a6;
+  --heading-color: #ac3235;
   --container-bg: #f5f5f5;
-  --accent-color: #444444;
-  --section-bg: #e0e0e0;
 }
 
 .dark-mode {
-  --bg-color: #001100;
-  --text-color: #00ff00;
-  --heading-color: #00ff00;
-  --container-bg: #002200;
-  --accent-color: #008800;
-  --section-bg: #003300;
+  --bg-color: #010011;
+  --text-color: #f3f3f3;
+  --text-color-line: #36ad03;
+  --heading-color: #ff4800;
+  --container-bg: #00000081;
 }
 
 /* Global Styles */
@@ -47,16 +45,20 @@ body {
 .container {
   max-width: 800px;
   margin: 40px auto;
-  padding: 30px;
-  background-color: var(--container-bg);
+  padding: 50px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 1px 15px rgba(0, 0, 0, 0.2);
+  background-color: var(--bg-color);
+  background-image: linear-gradient(var(--text-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--heading-color) 1px, transparent 1px);
+  background-size: 100% 20px, 100% 100%;
+  background-position: 0 0, 40px 0;
 }
 
 /* Header Styles */
 header {
   text-align: center;
   margin-bottom: 20px;
-  border-bottom: 2px solid var(--accent-color);
+  border-bottom: 2px solid var(--heading-color);
   padding-bottom: 20px;
 }
 
@@ -72,10 +74,11 @@ h2 {
   font-size: 24px;
   margin-top: 25px;
   margin-bottom: 15px;
-  border-bottom: 1px solid var(--accent-color);
+  /* border-bottom: 1px solid var(--heading-color); */
   padding-bottom: 5px;
   text-transform: uppercase;
   letter-spacing: 1px;
+  color: var(--heading-color);
 }
 
 /* Link Styles */
@@ -170,10 +173,10 @@ body::before {
   height: 100%;
   background-image: linear-gradient(
       to right,
-      var(--text-color) 1px,
+      var(--text-color-line) 1px,
       transparent 1px
     ),
-    linear-gradient(to bottom, var(--text-color) 1px, transparent 1px);
+    linear-gradient(to bottom, var(--text-color-line) 1px, transparent 1px);
   background-size: 10px 10px;
   animation: moveLines 5s linear infinite;
   z-index: -1;
@@ -190,10 +193,10 @@ body::after {
   height: 100%;
   background-image: linear-gradient(
       to right,
-      var(--text-color) 1px,
+      var(--text-color-line) 1px,
       transparent 1px
     ),
-    linear-gradient(to bottom, var(--text-color) 1px, transparent 1px);
+    linear-gradient(to bottom, var(--text-color-line) 1px, transparent 1px);
   background-size: 10px 10px;
   /* background-size: 100% 4px; */
   z-index: -1;
