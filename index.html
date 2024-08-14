@@ -10,7 +10,7 @@
     <button class="mode-toggle" id="modeToggle">🌓</button>
     <div class="container">
       <header>
-        <h1>Abhinav Kumar</h1>
+        <h1 class="typing-effect">ABHINAV KUMAR</h1>
         <p>SOFTWARE DEVELOPER</p>
         <p>
           <a href="mailto:abhinav.vikash2@gmail.com"
@@ -223,6 +223,50 @@
         modeToggle.textContent = body.classList.contains("dark-mode")
           ? "🌞"
           : "🌓";
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        const body = document.body;
+        const textNodes = getTextNodes(body);
+
+        textNodes.forEach((node) => {
+          const text = node.nodeValue;
+          node.nodeValue = "";
+          typeWriter(node, text, 0);
+        });
+
+        function getTextNodes(element) {
+          const nodes = [];
+          const walker = document.createTreeWalker(
+            element,
+            NodeFilter.SHOW_TEXT,
+            null,
+            false
+          );
+          let node;
+          while ((node = walker.nextNode())) {
+            if (node.nodeValue.trim()) {
+              nodes.push(node);
+            }
+          }
+          return nodes;
+        }
+
+        function typeWriter(node, text, index) {
+          if (index < text.length) {
+            node.nodeValue = text.slice(0, index) + "|";
+            setTimeout(() => typeWriter(node, text, index + 1), 50); // Adjust the speed of the typing effect here
+          } else {
+            node.nodeValue = text;
+          }
+        }
+
+        // Blinking cursor
+        const cursorInterval = setInterval(() => {
+          const cursor = document.querySelectorAll(".cursor");
+          cursor.forEach((c) => {
+            c.style.opacity = c.style.opacity === "0" ? "1" : "0";
+          });
+        }, 500); // Adjust the blinking speed here
       });
     </script>
   </body>
